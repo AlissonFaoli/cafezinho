@@ -10,6 +10,7 @@ class Cafezinho:
 	def __str__(self):
 		return f'Quantidade de café na xícara: {self.quantidade}g'
 
+	
 	def __float__(self):
 		return self.quantidade
 
@@ -19,11 +20,13 @@ class Cafezinho:
 			self.quantidade -= 50*goladas
 		return self.quantidade
 
+	
 	def tem_cafe(self):
 		if self.quantidade > 0:
 			return True
 		return False
 
+	
 	def encher(self):
 		if not self.tem_cafe():
 			self.quantidade += 500.0
@@ -33,8 +36,7 @@ class Cafezinho:
 
 cafezinho = Cafezinho(500)
 
-#while True:
-for _ in range(30):
+while True:
 	if cafezinho.tem_cafe():
 		cafezinho.tomar()
 	else:
